@@ -16,14 +16,14 @@ const closeMenu = () => {
 burger_btn.addEventListener('click', showNav)
 logo.addEventListener('click', closeMenu)
 
-// menuItem.forEach(item =>
-// 	item.addEventListener('click', () => {
-// 		closeMenu()
+menuItem.forEach(item =>
+	item.addEventListener('click', () => {
+		closeMenu()
 
-// 		if (item.classList.contains('active')) {
-// 			item.style = 'background-color: black'
-// 		} else {
-// 			item.classList.toggle('active')
-// 		}
-// 	})
-// )
+		// if (item.classList.contains('active')) {
+		// 	item.style = 'background-color: black'
+		// } else {
+		// 	item.classList.toggle('active')
+		// }
+	})
+)
