@@ -63,14 +63,12 @@ body {
 }
 
 .navbar {
-	transition: transform 1.5s;
 	height: 80px;
 	padding: 0 1em;
 	background-color: #fff;
 	width: 100%;
 
 	.wrapper {
-		// min-width: 90%;
 		position: relative;
 		height: 100%;
 		display: flex;
@@ -96,7 +94,6 @@ body {
 
 		.fa-bars {
 			padding: 0.5em;
-			transition: 0.3s;
 			font-size: 1.4rem;
 		}
 
@@ -104,7 +101,13 @@ body {
 			color: rgb(38, 83, 38);
 		}
 
-		.collapse {
+		.navigation {
+			display: block;
+			position: absolute;
+			top: -500px;
+			left: 0;
+			right: 0;
+
 			.navbar-nav {
 				height: 100%;
 				margin: 0;
@@ -132,12 +135,8 @@ body {
 		}
 
 		.showNav {
-			display: block;
-			position: absolute;
-			top: -500px;
-			left: 0;
-			width: 100%;
 			transform: translateY(580px);
+			transition: transform 0.5s;
 		}
 	}
 }
@@ -547,22 +546,10 @@ main {
 	}
 
 	.navbar {
-		.navbar-brand {
-			font-size: 2.9rem;
-			color: #000;
-		}
-		.navbar-toggler {
-			display: none;
-		}
-
-		.navbar-collapse {
-			display: inline-block;
-			position: absolute;
-			top: 0;
-			right: 0;
-
-			.navbar-nav {
-				flex-direction: row;
+		.wrapper {
+			.navbar-brand {
+				font-size: 2.9rem;
+				color: #000;
 			}
 		}
 	}
@@ -670,6 +657,23 @@ main {
 }
 
 @media (min-width: 992px) {
+	.navbar {
+		.wrapper {
+			.navbar-brand {
+				font-size: 2.9rem;
+				color: #000;
+			}
+
+			.navigation {
+				top: 0;
+				left: 50%;
+
+				.navbar-nav {
+					flex-direction: row;
+				}
+			}
+		}
+	}
 	main {
 		.offer {
 			.cards {
